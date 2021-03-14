@@ -1,0 +1,8 @@
+- File "database_tables_testdata.sql" contains all the needed sql tables with some test data. Import this file with PhpMyAdmin. Default control panel login is "admin" and password is "admin"
+
+- File "contract.sol" is ethereum contract which can be compiled on this site https://remix.ethereum.org/
+Recommended compiler version: 0.5.17+commit.d19bba13
+
+- Folder "public_html" contains all the source files needed to run a website. Upload them via FTP, then:
+1) Update "classes/_class_db.php" file with your database credentials
+2) Update "ajax/new_license.php" and "ajax/setting.php" email configuration for PHPMailer class.

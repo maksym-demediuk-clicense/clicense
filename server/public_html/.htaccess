@@ -1,0 +1,30 @@
+AddDefaultCharset UTF-8
+DirectoryIndex index.php
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+
+
+ErrorDocument 404 /404
+
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^index(/?)+$ index.php [L]
+RewriteRule ^login(/?)+$ index.php?menu=login [L]
+
+RewriteRule ^panel/exit(/?)+$ index.php?menu=account&sel=exit [L]
+RewriteRule ^panel(/?)+$ index.php?menu=account [L]
+RewriteRule ^panel/setting(/?)+$ index.php?menu=account&sel=setting [L]
+RewriteRule ^panel/products(/?)+$ index.php?menu=account&sel=products [L]
+RewriteRule ^panel/products/new(/?)+$ index.php?menu=account&sel=new [L]
+RewriteRule ^panel/products/([0-9]+)/change(/?)+$ /index.php?menu=account&sel=change&plugin_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/delete(/?)+$ /index.php?menu=account&sel=delete&plugin_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/licenses(/?)+$ /index.php?menu=account&sel=licenses&plugin_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/logs(/?)+$ /index.php?menu=account&sel=logs&plugin_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/keys(/?)+$ /index.php?menu=account&sel=keys&plugin_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/new_license(/?)+$ /index.php?menu=account&sel=new_license&plugin_id=$1 [L]
+RewriteRule ^panel/keys/([0-9]+)/download(/?)+$ /keys.php?key_id=$1 [L]
+RewriteRule ^panel/products/([0-9]+)/change_key/([0-9]+)(/?)+$ /index.php?menu=account&sel=key_change&plugin_id=$1&key_id=$2 [L]
+RewriteRule ^panel/file/([0-9]+)(/?)+$ /key.php?id=$1 [L]
+
+
