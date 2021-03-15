@@ -2,6 +2,18 @@
 
 - File "contract.sol" is ethereum contract which can be compiled on this site https://remix.ethereum.org/
 Recommended compiler version: 0.5.17+commit.d19bba13
+Update 'db_eth_contracts' table if you made any changes to contract file
+
+- Update 'db_eth_accounts' table:
+1) Download MetaMask wallet: https://metamask.io/
+2) Register your own wallet, get some free ether from faucet: https://faucet.metamask.io/
+3) Go to MetaMask - export private key for your wallet - update 'db_eth_accounts' table with your wallet address and private key
+
+- Update 'db_eth_providers' table
+1) Register on https://infura.io/
+2) Create your own project
+3) Go to your projet -> Settings -> Keys -> Endpoints
+4) Update 'db_eth_providers' with your own endpoints
 
 - Folder "public_html" contains all the source files needed to run a website. Upload them via FTP, then:
 1) Update "classes/_class_db.php" file with your database credentials
